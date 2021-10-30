@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Practice</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/style.css">
+
+    <script src="">https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js
+    </script>
+  </head>
+
+  <body>
+    <div class="dashboard"> <!-- Dashboard -->
+      <section class="navigation"> <!--navigation-->
+        <div>
+          <img src="asset/imgs/instincthub-logo.png" alt="Instincthub logo">
+        </div>
+
+        <div>
+          <span class="material-icons-outlined">home</span>
+          <span class="material-icons-outlined">account_circle</span>
+          <span class="material-icons-outlined">settings</span>
+        </div>
+
+      </section> <!-- Navigation End -->
+
+      <section class="main"> <!-- Main -->
+              <div class="search"> <!-- Search -->
+                <form action="">
+                    <input type="text" name="search" id="search"
+                    placeholder="You are looking for..." style="border-radius: 20px;">
+                    <span class="material-icons-outlined">search</span>
+                </form>
+
+              <div class="notification">
+                    <span class="material-icons-outlined">notifications</span>
+                    <span class="material-icons-outlined">event</span>
+              </div> <!-- Search End-->
+
+              <div class="title">
+                <h1>My Project</h1>
+                    <form action="#">
+                      <label for="projects">Sort By:</label>
+                      <select name="projects" id="projects">
+                        <option value="recent">Recent Project</option>
+                        <option value="finished">Finished Project</option>
+                        <option value="ongoing">Ongoing Project</option>
+                        <option value="stalled">Stalled Project</option>
+                      </select>
+              </div>
+
+              <div class="project_list"><!-- Project list -->
+
+                <div class="project"><!-- Project1 -->
+                    <div class="category"></div>
+                    <h2>Graphic Design</h2>
+                    <p>Active recently</p>
+
+                    <ul class="activity">
+                        <li>Coming soon banner</li>
+                        <li>Book cover</li>
+                    </ul>
+
+                    <div class="meta">
+                      <div class="contributors">
+                        <span class="material-icons-outlined">person</span>
+                        <span class="material-icons-outlined">person</span>
+                        <span class="material-icons-outlined">person</span>
+                      </div>
+                      <span class="material-icons-outlined">more_vert</span>
+                    </div>
+                </div><!-- Project1 End -->
+
+
+                <div class="project"><!-- Project2 -->
+                    <div class="category"></div>
+                    <h2>Magazine</h2>
+                    <p>1 hour ago</p>
+
+                    <ul class="activity">
+                        <li>Editorial page content</li>
+                    </ul>
+
+                    <div class="meta">
+                      <div class="contributors">
+                        <span class="material-icons-outlined">person</span>
+                        <span class="material-icons-outlined">person</span>
+                      </div>
+                      <span class="material-icons-outlined">more_vert</span>
+                    </div>
+                </div><!-- Project2 End -->
+
+                <div class="project"><!-- Project3 -->
+                    <div class="category"></div>
+                    <h2>Layouting</h2>
+                    <p>1 day ago</p>
+
+                    <ul class="activity">
+                        <li>Fix layout on page ads</li>
+                    </ul>
+
+                    <div class="meta">
+                      <div class="contributors">
+                        <span class="material-icons-outlined">person</span>
+                      </div>
+                      <span class="material-icons-outlined">more_vert</span>
+                    </div>
+                </div><!-- Project3 End -->
+
+                <div class="project"><!-- Project4 -->
+                    <div class="category"></div>
+                    <h2>Branding</h2>
+                    <p>3 days ago</p>
+
+                    <ul class="activity">
+                        <li>Brainstorming shapes</li>
+                    </ul>
+
+                    <div class="meta">
+                      <div class="contributors">
+                        <span class="material-icons-outlined">person</span>
+                      </div>
+                      <span class="material-icons-outlined">more_vert</span>
+                    </div>
+                </div><!-- Project4 End -->
+
+                <div class="project"><!-- Project5 -->
+                    <div class="category"></div>
+                    <h2>Guidlines</h2>
+                    <p>5 days ago</p>
+
+                    <ul class="activity">
+                        <li>Make brand guidelines for marked cosmetics</li>
+                    </ul>
+
+                    <div class="meta">
+                      <div class="contributors">
+                        <span class="material-icons-outlined">person</span>
+                        <span class="material-icons-outlined">person</span>
+                      </div>
+                      <span class="material-icons-outlined">more_vert</span>
+                    </div>
+                </div><!-- Project5 End -->
+
+                <div class="project"><!-- Project6 -->
+                    <div class="category"></div>
+                    <h2>Photoshoot</h2>
+                    <p>1 week ago</p>
+
+                    <ul class="activity">
+                        <li>Get the photo ready for magazine</li>
+                    </ul>
+
+                    <div class="meta">
+                      <div class="contributors">
+                        <span class="material-icons-outlined">person</span>
+                        <span class="material-icons-outlined">person</span>
+                        <span class="material-icons-outlined">person</span>
+                      </div>
+                      <span class="material-icons-outlined">more_vert</span>
+                    </div>
+                </div><!-- Project6 End -->
+
+              </div><!-- Project End -->
+
+            </section> <!-- Main End -->
+
+            <section class="secondary"> <!-- secondary -->
+              <div class="chart">
+                <h2>Total Project</h2>
+                <canvas id="myChart" width="400" height="400"></canvas>
+
+              </div>
+
+            </section> <!-- secondary End -->
+
+    </div><!-- Dashboard End -->
+    <script>
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: [
+  'Red',
+  'Blue',
+  'Yellow'
+],
+datasets: [{
+  label: 'My First Dataset',
+  data: [300, 50, 100],
+  backgroundColor: [
+    'rgb(255, 99, 132)',
+    'rgb(54, 162, 235)',
+    'rgb(255, 205, 86)'
+  ],
+  hoverOffset: 4
+  }]
+},
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+        }
+  });
+</script>
+<p>My doughnut isn't showing</p>
+
+  </body>
+</html>
