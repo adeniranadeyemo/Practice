@@ -5,17 +5,25 @@
     <title>Practice</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
+          <link rel="stylesheet" href="asset/css/icons.css">
+
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="asset/css/style.css">
 
-    <script src="">https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js">
     </script>
+
   </head>
+
 
   <body>
     <div class="dashboard"> <!-- Dashboard -->
       <section class="navigation"> <!--navigation-->
         <div>
-          <img src="asset/imgs/instincthub-logo.png" alt="Instincthub logo">
+          <img src="asset/imgs/instincthub-logo.png" alt="Instincthub logo" class="logo">
         </div>
 
         <div>
@@ -24,37 +32,43 @@
           <span class="material-icons-outlined">settings</span>
         </div>
 
+          <span class="material-icons-outlined">person</span>
+
       </section> <!-- Navigation End -->
 
       <section class="main"> <!-- Main -->
+
               <div class="search"> <!-- Search -->
                 <form action="">
                     <input type="text" name="search" id="search"
-                    placeholder="You are looking for..." style="border-radius: 20px;">
+                    placeholder="You are looking for...">
                     <span class="material-icons-outlined">search</span>
                 </form>
 
               <div class="notification">
                     <span class="material-icons-outlined">notifications</span>
                     <span class="material-icons-outlined">event</span>
-              </div> <!-- Search End-->
+              </div>
+            </div> <!-- Search End-->
+
 
               <div class="title">
                 <h1>My Project</h1>
-                    <form action="#">
-                      <label for="projects">Sort By:</label>
-                      <select name="projects" id="projects">
+                <form action="#">
+                    <label for="projects">Sort By:</label>
+                    <select name="projects" id="projects">
                         <option value="recent">Recent Project</option>
                         <option value="finished">Finished Project</option>
                         <option value="ongoing">Ongoing Project</option>
                         <option value="stalled">Stalled Project</option>
-                      </select>
+                    </select>
+                </form>
               </div>
 
               <div class="project_list"><!-- Project list -->
 
                 <div class="project"><!-- Project1 -->
-                    <div class="category"></div>
+                    <div class="category category_color1"></div>
                     <h2>Graphic Design</h2>
                     <p>Active recently</p>
 
@@ -69,13 +83,13 @@
                         <span class="material-icons-outlined">person</span>
                         <span class="material-icons-outlined">person</span>
                       </div>
-                      <span class="material-icons-outlined">more_vert</span>
+                      <span class="material-icons-outlined" style="margin-top: 12px;">more_vert</span>
                     </div>
                 </div><!-- Project1 End -->
 
 
                 <div class="project"><!-- Project2 -->
-                    <div class="category"></div>
+                    <div class="category category_color2"></div>
                     <h2>Magazine</h2>
                     <p>1 hour ago</p>
 
@@ -88,12 +102,12 @@
                         <span class="material-icons-outlined">person</span>
                         <span class="material-icons-outlined">person</span>
                       </div>
-                      <span class="material-icons-outlined">more_vert</span>
+                      <span class="material-icons-outlined" style="margin-top: 12px;">more_vert</span>
                     </div>
                 </div><!-- Project2 End -->
 
                 <div class="project"><!-- Project3 -->
-                    <div class="category"></div>
+                    <div class="category category_color3"></div>
                     <h2>Layouting</h2>
                     <p>1 day ago</p>
 
@@ -105,12 +119,12 @@
                       <div class="contributors">
                         <span class="material-icons-outlined">person</span>
                       </div>
-                      <span class="material-icons-outlined">more_vert</span>
+                      <span class="material-icons-outlined" style="margin-top: 12px;">more_vert</span>
                     </div>
                 </div><!-- Project3 End -->
 
                 <div class="project"><!-- Project4 -->
-                    <div class="category"></div>
+                    <div class="category category_color4"></div>
                     <h2>Branding</h2>
                     <p>3 days ago</p>
 
@@ -122,12 +136,12 @@
                       <div class="contributors">
                         <span class="material-icons-outlined">person</span>
                       </div>
-                      <span class="material-icons-outlined">more_vert</span>
+                      <span class="material-icons-outlined" style="margin-top: 12px;">more_vert</span>
                     </div>
                 </div><!-- Project4 End -->
 
                 <div class="project"><!-- Project5 -->
-                    <div class="category"></div>
+                    <div class="category category_color3"></div>
                     <h2>Guidlines</h2>
                     <p>5 days ago</p>
 
@@ -140,12 +154,12 @@
                         <span class="material-icons-outlined">person</span>
                         <span class="material-icons-outlined">person</span>
                       </div>
-                      <span class="material-icons-outlined">more_vert</span>
+                      <span class="material-icons-outlined" style="margin-top: 12px;">more_vert</span>
                     </div>
                 </div><!-- Project5 End -->
 
                 <div class="project"><!-- Project6 -->
-                    <div class="category"></div>
+                    <div class="category category_color4"></div>
                     <h2>Photoshoot</h2>
                     <p>1 week ago</p>
 
@@ -159,7 +173,7 @@
                         <span class="material-icons-outlined">person</span>
                         <span class="material-icons-outlined">person</span>
                       </div>
-                      <span class="material-icons-outlined">more_vert</span>
+                      <span class="material-icons-outlined" style="margin-top: 12px;">more_vert</span>
                     </div>
                 </div><!-- Project6 End -->
 
@@ -171,8 +185,59 @@
               <div class="chart">
                 <h2>Total Project</h2>
                 <canvas id="myChart" width="400" height="400"></canvas>
-
+                <div class="complete">
+                  <h3>3 Completed</h3>
+                  <p>from 5 projects</p>
+                </div>
               </div>
+
+              <div class="recent_project"><!-- Recent Project -->
+
+                <div class="listing">
+                  <div class="title">
+                    <div class="group category_color1"></div>
+                    <div class="category">
+                      <h2>Layouting</h2>
+                      <p> By Chidozie Kachukwu </p>
+                    </div>
+                      <span class="material-icons-outlined">more_vert</span>
+                  </div>
+                </div>
+
+                <div class="listing">
+                  <div class="title">
+                    <div class="group category_color4"></div>
+                    <div class="category">
+                      <h2> Photoshoot </h2>
+                      <p> By Musa Ismail </p>
+                    </div>
+                      <span class="material-icons-outlined">more_vert</span>
+                  </div>
+                </div>
+
+                <div class="listing">
+                  <div class="title">
+                    <div class="group category_color2"></div>
+                    <div class="category">
+                      <h2> Branding </h2>
+                      <p> By Ezekiel Arowolo </p>
+                    </div>
+                      <span class="material-icons-outlined">more_vert</span>
+                  </div>
+                </div>
+
+                <div class="listing">
+                  <div class="title">
+                    <div class="group category_color3"></div>
+                    <div class="category">
+                      <h2> Graphic Design </h2>
+                      <p> By Matthew Kelechi </p>
+                    </div>
+                      <span class="material-icons-outlined">more_vert</span>
+                  </div>
+                </div>
+              </div> <!-- Recent Project End -->
+
 
             </section> <!-- secondary End -->
 
@@ -183,9 +248,9 @@ const myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
       labels: [
-  'Red',
-  'Blue',
-  'Yellow'
+  'Completed',
+  'Ongoing',
+  'Stalled'
 ],
 datasets: [{
   label: 'My First Dataset',
@@ -207,7 +272,7 @@ datasets: [{
         }
   });
 </script>
-<p>My doughnut isn't showing</p>
+
 
   </body>
 </html>
